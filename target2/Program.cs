@@ -17,19 +17,19 @@
 // // 78 -> третьей цифры нет
 // // 32679 -> 6
 
-Console.WriteLine("введите число = ");
-int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("введите число = ");
+// int x = Convert.ToInt32(Console.ReadLine());
 
-if (x>99)
-{
-   while (x > 999)
-    {
-       x = (x / 10);
-    }  
-    x = x % 10;
-    Console.WriteLine(x);
-}
-else Console.WriteLine("Третьей цифры нет");
+// if (x>99)
+// {
+//    while (x > 999)
+//     {
+//        x = (x / 10);
+//     }  
+//     x = x % 10;
+//     Console.WriteLine(x);
+// }
+// else Console.WriteLine("Третьей цифры нет");
 
 // int Number = new Random().Next(1, 1500);
 // System.Console.WriteLine();
