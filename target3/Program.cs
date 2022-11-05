@@ -42,31 +42,25 @@
 
 Console.WriteLine("Введите пятизначное число");
 int x = Convert.ToInt32(Console.ReadLine());
-int a = x / 10000;
-int b = x % 10;
-int c = ((x / 1000) % 10);
-int d = ((x % 100) / 10);
-int razryad = 0;
+CheckPalindrom(x);
 
-void CountNumbers(int x)
+void CheckPalindrom(int x)
 {
-    int razryad = 0;
-    while (x % 10 > 0)
+    if (x >= 10000 && x < 100000)
     {
-        razryad++;
-        x /= 10;
+        int a = x / 10000;
+        int b = x % 10;
+        int c = ((x / 1000) % 10);
+        int d = ((x % 100) / 10);
+        if (a == b && c == d)
+        {
+            Console.WriteLine("да");
+        }
+        else Console.WriteLine("нет");
     }
-    Console.WriteLine(razryad);
+    else Console.WriteLine("вы ввели недопустимое число");
 }
 
-if (razryad < 5 || razryad>5)
-{
-    if (a == b && c == d)
-    {
-        Console.WriteLine("да");
-    }
-    else Console.WriteLine("нет");
-}
-else Console.WriteLine("вы ввели недопустимое число");
+
 
 
