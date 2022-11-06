@@ -1,7 +1,4 @@
-﻿// Задача 24: Напишите программу, которая принимает на вход число (А)
-//  и выдаёт сумму чисел от 1 до А.
-
-// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+﻿// Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
 // 456 -> 3
 // 78 -> 2
 // 89126 -> 5
@@ -108,25 +105,112 @@
 // Если N = 5 -> 0 1 1 2 3
 // Если N = 3 -> 0 1 1
 // Если N = 7 -> 0 1 1 2 3 5 8
-int n= Convert.ToInt32(Console.ReadLine());
-int[] array = new int[n];
-  
-    for (int i=0;i<n;i++) 
-    {
-        if (i == 0) array[i]=0;
-        else if (i == 1) array[i]=1;
-        else array[i] = array[i-1]+array[i-2];
-    }
-   
-   void PrintArray(int[] array)
+// int n= Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+
+//     for (int i=0;i<n;i++) 
+//     {
+//         if (i == 0) array[i]=0;
+//         else if (i == 1) array[i]=1;
+//         else array[i] = array[i-1]+array[i-2];
+//     }
+
+//    void PrintArray(int[] array)
+// {
+//     int count = array.Length;
+//     for ( int i = 0; i < count; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
+// PrintArray(array);
+
+// Console.WriteLine("Введите пятизначное число");
+// int x = Convert.ToInt32(Console.ReadLine());
+// CheckPalindrom(x);
+
+// void CheckPalindrom(int x)
+// {
+//     if (x >= 10000 && x < 100000)
+//     {
+//         int a = x / 10000;
+//         int b = x % 10;
+//         int c = ((x / 1000) % 10);
+//         int d = ((x % 100) / 10);
+//         if (a == b && c == d)
+//         {
+//             Console.WriteLine("да");
+//         }
+//         else Console.WriteLine("нет");
+//     }
+//     else Console.WriteLine("вы ввели недопустимое число");
+// }
+
+// void CountNumbers(int num)
+// {
+//     int razryad = 0;
+//     while (num % 10 > 0)
+//     {
+//         razryad++;
+//         num /= 10;
+//     }
+//     Console.WriteLine(razryad);
+// }
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) 
+// и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+// Console.WriteLine("Введите первое число");
+// double a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число");
+// double b = Convert.ToInt32(Console.ReadLine());
+// Vozved(a, b);
+
+// void Vozved(double a, double b)
+// {
+//     double log = 0;
+//     if (b > 0)
+//     {
+//         log = Math.Pow(a, b);
+//         Console.WriteLine(log);
+//     }
+//     else Console.WriteLine("Введите положительное второе число");
+// }
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе. Через строку решать нельзя.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+// Console.WriteLine("Введите число");
+// int x = Convert.ToInt32(Console.ReadLine());
+// SumNumbers(x);
+
+// void SumNumbers(int x)
+// {
+//     int sum = 0;
+//     while (x != 0)
+//     {
+//         sum += x % 10;
+//         x = x / 10;
+//     }
+//     Console.WriteLine(sum);
+// }
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов с клавиатуры и выводит массив на экран.
+int[] array = new int[8];
+CreateFillArray(array);
+
+void CreateFillArray(int[] array)
 {
-    int count = array.Length;
-    for ( int i = 0; i < count; i++)
+    for (int i = 0; i < 8; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"Введите элемент массива с индексом {i}:\t");
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
-    Console.WriteLine();
 }
-PrintArray(array);
 
-
+for (int i = 0; i < 8; i++) Console.WriteLine(array[i]);
