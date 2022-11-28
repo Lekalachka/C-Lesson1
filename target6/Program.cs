@@ -24,20 +24,41 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-Console.WriteLine("Введите значение b1");
-var b1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите значение k1");
-var k1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите значение b2");
-var b2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите значение k2");
-var k2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите значение b1");
+// var b1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите значение k1");
+// var k1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите значение b2");
+// var b2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите значение k2");
+// var k2 = Convert.ToDouble(Console.ReadLine());
 
 
-var x = (b1-b2)/(k2-k1);
-var y = k1 * x + b1;
+// var x = (b1-b2)/(k2-k1);
+// var y = k1 * x + b1;
 
-x = Math.Round(x, 3);
-y = Math.Round(y, 3);
+// x = Math.Round(x, 3);
+// y = Math.Round(y, 3);
 
-Console.WriteLine($"({x}, {y})");
+// Console.WriteLine($"({x}, {y})");
+
+// задача 40 - HARD необязательная. На вход программы подаются три целых положительных числа. 
+// Определить , является ли это сторонами треугольника. Если да, то вывести всю информацию по нему
+//  - площадь, периметр, значения углов треугольника в градусах, является ли он прямоугольным,
+//   равнобедренным, равносторонним
+
+Console.WriteLine("Введите a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите c: ");
+int c = Convert.ToInt32(Console.ReadLine());
+
+bool Checktriangle(int a, int b, int c)
+{
+    bool x = false;
+    if ((a + b > c) && (b + c > a) && (a + c > b)) x = true;
+    return x;
+}
+Console.WriteLine(Checktriangle(a, b, c));
+

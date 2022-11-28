@@ -86,20 +86,20 @@
 // Задача 40: Напишите программу, которая принимает на вход три числа и проверяет,
 // может ли существовать треугольник с сторонами такой длины.
 
-// Console.WriteLine("Введите первое число");
-// int a = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите второе число");
-// int b = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите третье число");
-// int c = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите третье число");
+int c = Convert.ToInt32(Console.ReadLine());
 
-// bool Checktriangle(int a, int b, int c)
-// {
-//     bool x = false;
-//     if ((a + b > c) && (b + c > a) && (a + c > b)) x = true;
-//     return x;
-// }
-// Console.WriteLine(Checktriangle(a, b, c));
+bool Checktriangle(int a, int b, int c)
+{
+    bool x = false;
+    if ((a + b > c) && (b + c > a) && (a + c > b)) x = true;
+    return x;
+}
+Console.WriteLine(Checktriangle(a, b, c));
 
 // Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
 // Если N = 5 -> 0 1 1 2 3
@@ -200,17 +200,17 @@
 //     Console.WriteLine(sum);
 // }
 
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов с клавиатуры и выводит массив на экран.
-int[] array = new int[8];
-CreateFillArray(array);
+// // Задача 29: Напишите программу, которая задаёт массив из 8 элементов с клавиатуры и выводит массив на экран.
+// int[] array = new int[8];
+// CreateFillArray(array);
 
-void CreateFillArray(int[] array)
-{
-    for (int i = 0; i < 8; i++)
-    {
-        Console.Write($"Введите элемент массива с индексом {i}:\t");
-        array[i] = Convert.ToInt32(Console.ReadLine());
-    }
-}
+// void CreateFillArray(int[] array)
+// {
+//     for (int i = 0; i < 8; i++)
+//     {
+//         Console.Write($"Введите элемент массива с индексом {i}:\t");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+// }
 
-for (int i = 0; i < 8; i++) Console.WriteLine(array[i]);
+// for (int i = 0; i < 8; i++) Console.WriteLine(array[i]);
